@@ -1,5 +1,6 @@
 HEADERS += finddialog.h
-SOURCES += finddialog.cpp
+SOURCES += finddialog.cpp \
+    main.cpp
 
 TARGET = find
 
