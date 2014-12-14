@@ -364,7 +364,15 @@ bool MainWindow::saveAs()
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-
+    if (okToContinue())
+    {
+        writeSeeting();
+        event->accept();
+    }
+    else
+    {
+        event->ignore();
+    }
 }
 
 void MainWindow::setCurrentFile(const QString& fileName)
